@@ -38,6 +38,7 @@ sr.reveal(".social_icons", { delay: 200});
 sr.reveal(".featured-image", { delay: 320});
 
 sr.reveal(".Project-content", { interval: 320});
+sr.reveal(".timeline-item", { interval: 320});
 
 sr.reveal(".top-header", {});
 

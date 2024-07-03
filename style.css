@@ -489,6 +489,56 @@ i{
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
 }
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background: rgb(164,81,255);
+    background: linear-gradient(180deg, rgba(164,81,255,1) -21%, rgba(192,155,255,1) 20%, rgba(147,85,255,1) 100%);
+    box-shadow: 0 0 25px #8749f2,
+                0 0 25px #8749f2;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color);
+    margin: 6px 0 15px;
+}
+.timeline-content{
+    background: var(--body-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0px 2px 5px -1px var(--first-shadow);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 5px -1px var(--first-shadow);
+    border: 1px solid #8749f2;
+}
+.timeline-content h3{
+    font-size: 20px;
+    color: var(--text-color);
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+.timeline-content p{
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 300;
+    line-height: 22px;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(164,81,255);
+    background: linear-gradient(180deg, rgba(164,81,255,1) -21%, rgba(192,155,255,1) 20%, rgba(147,85,255,1) 100%);  
+}
 
 .Project-content{
     display: grid;
@@ -539,7 +589,7 @@ i{
     border-radius: 50%;
     color: var(--text-color);
     background: rgb(164,81,255);
-background: linear-gradient(180deg, rgba(164,81,255,1) -21%, rgba(192,155,255,1) 20%, rgba(147,85,255,1) 100%);
+    background: linear-gradient(180deg, rgba(164,81,255,1) -21%, rgba(192,155,255,1) 20%, rgba(147,85,255,1) 100%);
 }
 .proj:hover{
     border: 1px solid #8749f2;
