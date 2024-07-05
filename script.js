@@ -39,8 +39,11 @@ sr.reveal(".featured-image", { delay: 320});
 
 sr.reveal(".Project-content", { interval: 320});
 sr.reveal(".timeline-item", { interval: 320});
-
+sr.reveal(".skill", { delay: 100});
+sr.reveal(".skill-box", { delay: 100});
 sr.reveal(".top-header", {});
+sr.reveal(".about-info", { delay: 100});
+sr.reveal(".contact-info", { delay: 100});
 
 const srLeft = ScrollReveal({
     origin: "left",
@@ -49,8 +52,7 @@ const srLeft = ScrollReveal({
     reset: true,
 })
 
-srLeft.reveal(".about-info", { delay: 100});
-srLeft.reveal(".contact-info", { delay: 100});
+
 
 const srRight = ScrollReveal({
     origin: "right",
@@ -59,8 +61,7 @@ const srRight = ScrollReveal({
     reset: true,
 })
 
-srRight.reveal(".skill", { delay: 100});
-srRight.reveal(".skill-box", { delay: 100});
+
 
 const sections = document.querySelectorAll(".section[id]");
 
