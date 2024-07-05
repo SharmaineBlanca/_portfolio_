@@ -45,22 +45,6 @@ sr.reveal(".top-header", {});
 sr.reveal(".about-info", { delay: 100});
 sr.reveal(".contact-info", { delay: 100});
 
-const srLeft = ScrollReveal({
-    origin: "left",
-    distance: "80px",
-    duration: 1000,
-    reset: true,
-})
-
-
-
-const srRight = ScrollReveal({
-    origin: "right",
-    distance: "80px",
-    duration: 1000,
-    reset: true,
-})
-
 
 
 const sections = document.querySelectorAll(".section[id]");
