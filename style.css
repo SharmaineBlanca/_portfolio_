@@ -748,6 +748,9 @@ footer{
     html{
         font-size: 55%;
        }
+    .nav-name{
+        font-size: 20px;
+    }
 }
 @media only screen and (max-width: 900px){
     .nav-menu-btn{
@@ -781,6 +784,9 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .nav-name{
+        font-size: 20px;
     }
     .featured-box{
         flex-direction: column;
@@ -828,6 +834,9 @@ footer{
     }
 }
 @media only screen and (max-width: 320px){
+    .nav-name{
+        font-size: 20px;
+    }
     .featured.name{
         font-size: 40px;
     }
