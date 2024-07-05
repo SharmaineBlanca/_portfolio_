@@ -12,9 +12,11 @@
     --body-color: #fff5fe;
     --color-white: #fff5fe;
     --text-color-second: #140d13;
-    --first-color: #a617ff;
+    --first-color: #d99dff;
     --first-shadow: #573b6e;
     --footer: #2e2b31;
+    --nav: #71508d;
+    --nav-shadow: #fff;
 
     --box-color: #fff;
     --nav-color: #fff5fe;
@@ -25,7 +27,7 @@
     --color-white: #242526;
 
     --icon-color: #242526;
-    --mode-color: #ccc;
+    --mode-color: #bdbdbd;
 }
 
 body{
@@ -39,11 +41,12 @@ body.dark{
     --nav-color: #2e2b31;
     --color-white: #fff;
     --text-color: #fff;
-
+    --nav-shadow: #000000;
     --nav-icon: #fff;
     --logo-color: #fff;
     --icon-color: #9b49f2;
-    --mode-color: #fff;
+    --mode-color: #fff5fe;
+    --nav: #938098;
 }
 
 .container{
@@ -89,9 +92,11 @@ nav{
 .nav-link{
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 800;
     padding-inline: 15px;
     margin-inline: 20px;
+    -webkit-text-stroke: .5px var(--nav-shadow);
+    text-shadow: 0 0 1px #ffffff;
 }
 
 .nav-menu-btn{
@@ -105,7 +110,7 @@ nav{
 }
 .active-link{
     position: relative;
-    color: var(--first-color);
+    color: #8749f2;
     transition: 0.3s;
 }
 .active-link::after{
@@ -116,7 +121,7 @@ nav{
     transform: translate(-50%, -50%);
     width: 50px;
     height: 2px;
-    background: var(--first-color);
+    background: #8749f2;
 }
 .mode{
     display: flex;
@@ -752,14 +757,15 @@ footer{
         left: 0;  
     }
     .nav-menu{
+        z-index: 1000;
         position: fixed;
         top: 0;
         left: -100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #c6a5d499;
-        backdrop-filter: blur(10px);
+        background: var(--nav);
+        backdrop-filter: blur(20px);
         width: 300px;
         border-radius: 0px 30px 0px 30px;
         min-height: 450px;
@@ -837,12 +843,7 @@ footer{
     .typedText{
         font-size: 20px;
     }
-    .timeline-content h3{
-        font-size: 1.5vw;
-    }
-    .timeline-content p{
-        font-size: 1vw;
-    }
+   
     .timeline-item:nth-child(odd){
         padding-right: 0;
         text-align: left;

@@ -44,6 +44,7 @@ sr.reveal(".skill-box", { delay: 100});
 sr.reveal(".top-header", {});
 sr.reveal(".about-info", { delay: 100});
 sr.reveal(".contact-info", { delay: 100});
+sr.reveal(".row2", { delay: 100});
 
 
 

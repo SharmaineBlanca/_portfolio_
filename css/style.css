@@ -32,7 +32,7 @@
     --body-color: #fff5fe;
     --color-white: #fff5fe;
     --text-color-second: #140d13;
-    --first-color: #a617ff;
+  
     --first-shadow: #573b6e;
     --footer: #2e2b31;
 
@@ -46,7 +46,7 @@
 
     --icon-color: #242526;
     --icon-colors: #242526;
-    --mode-color: #ccc;
+  
 }
 
 body{
@@ -65,10 +65,10 @@ body.dark{
     --logo-color: #fff;
     --icon-color: #9b49f2;
     --icon-colors: #fff;
-    --mode-color: #fff;
+   
 }
 
-.ftco-section {
+#section-section {
 	padding: 7em 0;
 	position: relative;
 	@include media-breakpoint-down(sm){
