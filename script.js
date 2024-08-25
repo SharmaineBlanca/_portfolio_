@@ -48,27 +48,32 @@ sr.reveal(".row2", { delay: 100});
 
 
 
-const sections = document.querySelectorAll(".section[id]");
+const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
-    const scrollY = window.pageYOffset;
+    const scrollY = window.scrollY;
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute("id");
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 50,
+            sectionId = current.getAttribute("id");
 
-        const navLink = document.querySelector(".nav-menu a[href*=" + sectionId + "]");
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink.classList.add("active-link");
+        if ((scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) || 
+            (sectionId === "home" && scrollY < sectionTop + sectionHeight)) {
+            document
+                .querySelector(".nav-menu a[href*=" + sectionId + "]")
+                .classList.add("active-link");
         } else {
-            navLink.classList.remove("active-link");
+            document
+                .querySelector(".nav-menu a[href*=" + sectionId + "]")
+                .classList.remove("active-link");
         }
     });
 }
 
 window.addEventListener("scroll", scrollActive);
+
+
 
 
 // Get the button
