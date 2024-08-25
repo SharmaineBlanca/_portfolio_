@@ -10,16 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" href="css/animate.css">
-	
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	
-	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 
     <title>Portfolio</title>
@@ -41,6 +32,10 @@
                         <div class="circle"></div>
                     </li>
                     <li class="nav_list">
+                        <a href="certificate.html" class="nav-link">Certificates</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
                         <a href="#services-section" class="nav-link">Services</a>
                         <div class="circle"></div>
                     </li>
@@ -49,7 +44,7 @@
                         <div class="circle"></div>
                     </li>
                     <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#project" class="nav-link">Projects</a>
                         <div class="circle"></div>
                     </li>
                     <li class="nav_list">
@@ -68,6 +63,7 @@
                     <i class="uil uil-bars" onclick="myMenuFunction()"></i>
                 </div>
         </nav>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
         <main class="wrapper">
             <section class="featured-box" id="home">
                 <div class="featured-text">
@@ -109,7 +105,7 @@
                                     <p>My name is Sharmaine! I'm a web developer</p>
                                 </figcaption>
                             </figure>
-                            <button class="about-me-btn">Read More</button>
+                            <a href="certificate.html"><button class="about-me-btn">Read More</a></button>
                         </div>
                     </div>
                     <div class="skill">
@@ -219,86 +215,96 @@
                     </div>
                     </div>
                 </div>
-            </section>
-            <section class="section" id="projects">
-                <div class="top-header">
-                    <h1>Projects</h1>
-                </div>
-                <div class="Project-content" >
-                    <div class="proj">
-                        <img src="sh.jpg">
-                        <div class="main-row">
-                        <div class="row-text">
-                            <h5>Melophile</h5>
+            </section>                  
+            <section class="section" id="project" >
+                <div class="container">
+                    <div class="top-header">
+                        <h1>Projects</h1>
+                    </div>
+                  <div class="row proj-content2">
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="https://sparkly-clafoutis-f58fad.netlify.app"><img src="p1.png" alt=""></a>
+                          <span class="link">
+                            <a href="https://sparkly-clafoutis-f58fad.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
                         </div>
-                        <div class="row-icon">
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <div class="down-content">
+                          <span class="tech">HTML | CSS</span>
+                          <h4>Melophile</h4>
                         </div>
+                      </div>
                     </div>
-                    <h4>project1</h4>
-                </div>
-                <div class="proj">
-                    <img src="sh.jpg">
-                    <div class="main-row">
-                    <div class="row-text">
-                        <h5>School Supplies Inventory</h5>
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="#"><img src="p2.png" alt=""></a>
+                          <span class="link">
+                            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                        </div>
+                        <div class="down-content">
+                          <span class="tech">Python Flask | HTML | CSS </span>
+                          <h4>School Supply Stock</h4>
+                        </div>
+                      </div>
                     </div>
-                    <div class="row-icon">
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="#"><img src="p3.png" alt=""></a>
+                          <span class="link">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                        </div>
+                        <div class="down-content">
+                          <span class="tech">PHP | HTML | CSS | JavaScript</span>
+                          <h4>Dear Diary</h4>
+                        </div>
+                      </div>
                     </div>
+                    </div>
+                    <div class="row proj-content">
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="https://sparkly-clafoutis-f58fad.netlify.app"><img src="p4.png" alt=""></a>
+                          <span class="link">
+                            <a href="https://sparkly-clafoutis-f58fad.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                        </div>
+                        <div class="down-content">
+                          <span class="tech">HML | CSS | JavaScript</span>
+                          <h4>Awe'Sound</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="#"><img src="p5.png" alt=""></a>
+                          <span class="link">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                        </div>
+                        <div class="down-content">
+                          <span class="tech">PHP | Bootstrap | HTML | CSS | JavaScript</span>
+                          <h4>DormBell: Dorm Management System</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+                      <div class="proj">
+                        <div class="thumb">
+                          <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                          <span class="link">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                        </div>
+                        <div class="down-content">
+                          <span class="tech">David Hutson</span>
+                          <h4>Full Stack Developer</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h4>project2</h4>
-            </div>
-            <div class="proj">
-                <img src="sh.jpg">
-                <div class="main-row">
-                <div class="row-text">
-                    <h5>Project1</h5>
-                </div>
-                <div class="row-icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-            <h4>project3</h4>
-        </div>
-        <div class="proj">
-            <img src="sh.jpg">
-            <div class="main-row">
-            <div class="row-text">
-                <h5>Project1</h5>
-            </div>
-            <div class="row-icon">
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-        </div>
-        <h4>project4</h4>
-    </div>
-    <div class="proj">
-        <img src="sh.jpg">
-        <div class="main-row">
-        <div class="row-text">
-            <h5>Project1</h5>
-        </div>
-        <div class="row-icon">
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-    </div>
-    <h4>project5</h4>
-</div>
-<div class="proj">
-    <img src="sh.jpg">
-    <div class="main-row">
-    <div class="row-text">
-        <h5>Project1</h5>
-    </div>
-    <div class="row-icon">
-        <i class="fa-solid fa-arrow-right"></i>
-    </div>
-</div>
-<h4>project6</h4>
-</div>
-            </div>
-            </section>
+              </section>
             <section class="section" id="contact">
                 <div class="top-header">
                     <h1>Let's Work Together</h1>
@@ -329,6 +335,7 @@
                 </div>
                 </div>
             </section>
+
         </main>
         <footer>
             <div class="middle-footer">
@@ -340,7 +347,16 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="footer_menu_list">
-                        <a href="#projects">Projects</a>
+                        <a href="certificate.html">Certificates</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#services-section">Services</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#project">Projects</a>
                     </li>
                     <li class="footer_menu_list">
                         <a href="#contact">Contact</a>
@@ -356,7 +372,9 @@
             <div class="bottom-footer">
                 <p>Copyright &copy; <a href="#home" style="text-decoration: none; color: #8749f2;">Mayne</a> - All rights reserved 2024.</p>
             </div>
+
         </footer>
+        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>

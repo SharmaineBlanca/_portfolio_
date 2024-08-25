@@ -50,26 +50,73 @@ sr.reveal(".row2", { delay: 100});
 
 const sections = document.querySelectorAll(".section[id]");
 
-function scrollActive(){
-    const scrollY = window.scrollY;
+function scrollActive() {
+    const scrollY = window.pageYOffset;
 
-    sections.forEach((current) => {
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute("id");
 
-        const sectionHeight = current.offsetHeight,
+        const navLink = document.querySelector(".nav-menu a[href*=" + sectionId + "]");
 
-            sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute("id");
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document
-            .querySelector(".nav-menu a[href*=" + sectionId + "]")
-            .classList.add("active-link");
-        }else{
-            document
-            .querySelector(".nav-menu a[href*=" + sectionId + "]")
-            .classList.remove("active-link");
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLink.classList.add("active-link");
+        } else {
+            navLink.classList.remove("active-link");
         }
     });
 }
 
 window.addEventListener("scroll", scrollActive);
+
+
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+
+    let initIsotope;
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+        itemSelector: '.isotope-item',
+        layoutMode: layout,
+        filter: filter,
+        sortBy: sort
+      });
+    });
+
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+      filters.addEventListener('click', function() {
+        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+        this.classList.add('filter-active');
+        initIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        if (typeof aosInit === 'function') {
+          aosInit();
+        }
+      }, false);
+    });
+
+  });
